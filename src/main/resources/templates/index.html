@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>MoonBox | Test Game </title>
+    <style>
+      .cuadrado {
+        background: #428bca;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        scroll-margin-top: 0%;
+      }
+    </style>
+  </head>
+  <body style="background-color: #5b567a; text-align: center">
+    <div id="img">
+      <img
+        src="logo.jpg"
+        alt="Logo"
+        style="width: 99%"
+        height="270"
+      />
+    </div>
+    <canvas
+      class="cuadrado"
+      id="unity-canvas"
+      width="1360"
+      height="270"
+      style="width: 99%; height: 270px; background: #231f20"
+    ></canvas>
+
+
+
+    <script src="Build/game.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/game.data.unityweb",
+        frameworkUrl: "Build/game.framework.js.unityweb",
+        codeUrl: "Build/game.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Game",
+        productVersion: "1.0",
+        // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+        // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+      });
+    </script>
+
+    <script>
+      let img = document.getElementById("img");
+      let canvas = document.getElementById("unity-canvas");
+      img.style.display = "block";
+      canvas.style.display = "none";
+      javascript:window.scrollTo(0,0);
+
+      setTimeout(() => {
+        img.style.opacity = 0.8;
+      }, 500);
+      setTimeout(() => {
+        img.style.opacity = 0.6;
+      }, 1000);
+      setTimeout(() => {
+        img.style.opacity = 0.8;
+      }, 1500);
+      setTimeout(() => {
+        img.style.opacity = 1;
+      }, 2000);
+      setTimeout(() => {
+        img.style.opacity = 0.8;
+      }, 2500);
+      setTimeout(() => {
+        img.style.opacity = 0.6;
+      }, 3000);
+      setTimeout(() => {
+        img.style.opacity = 0.8;
+      }, 3500);
+      setTimeout(() => {
+        img.style.opacity = 1;
+      }, 4000);
+      setTimeout(() => {
+        img.style.opacity = 0.8;
+      }, 4500);
+      setTimeout(() => {
+        img.style.opacity = 0.6;
+      }, 5000);
+      setTimeout(() => {
+        img.style.opacity = 0.8;
+      }, 5500);
+      setTimeout(() => {
+        img.style.opacity = 1;
+      }, 6000);
+      setTimeout(() => {
+        img.style.opacity = 0.8;
+      }, 6500);
+      setTimeout(() => {
+        img.style.opacity = 0.6;
+      }, 7000);
+
+
+      setTimeout(() => {
+        img.style.display = "none";
+        canvas.style.display = "block";
+      }, 7000);
+    </script>
+  </body>
+</html>
